@@ -37,7 +37,7 @@ function App() {
               {todos.map((todo, index) => (
                 <div key={crypto.randomUUID()} className="todo">
                   <li key={index}>{todo}</li>
-                  <button className="delete-button">Delete</button>
+                  <button className="delete-button" onClick={() => deleteTodo(todo)}>Delete</button>
                 </div>
               ))}
             </ul>
