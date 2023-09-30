@@ -1,4 +1,6 @@
 import './App.css';
+import TodoInput from './TodoInput';
+import TodoList from './TodoList';
 
 import { useState } from "react";
 
@@ -21,30 +23,8 @@ function App() {
   return (
     <div className="App">
       <h1>Josh's ToDo List</h1>
-      <div className="input-wrapper">
-        <input
-          type="text"
-          value={todo}
-          name="todo"
-          placeholer="Create a new todo"
-          onChange={(e) => { setTodo(e.target.value)}}
-        />
-        <button className="add-button" onClick={addTodo}>Add</button>
-      </div>
-      <div className="todo-wrapper">
-        {todos.length > 0 ? (
-          <ul className="todo-list">
-              {todos.map((todo, index) => (
-                <div key={crypto.randomUUID()} className="todo">
-                  <li key={index}>{todo}</li>
-                  <button className="delete-button" onClick={() => deleteTodo(todo)}>Delete</button>
-                </div>
-              ))}
-            </ul>
-        ) : (
-          <div className="empty">No tasks found</div>
-        )}
-      </div>
+      <TodoInput todo={todo} setTodo={setTodo} addTodo={addTodo} />
+      <TodoList list={todos} remove={deleteTodo} />
     </div>
   );
 }
