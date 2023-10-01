@@ -1,5 +1,5 @@
 const {MongoClient} = require('mongodb');
-var config = require('../config');
+var config = require('./config');
 
 async function main() {
   const uri = config.mongoUri;
@@ -10,6 +10,7 @@ async function main() {
 
     await createTodo(client, {
       description: "Test Todo",
+      complete: false,
     });
   } finally {
     await client.close();
@@ -25,6 +26,6 @@ main().catch(console.error);
  */
 
 async function createTodo(client, newTodo) {
-  const result = await client.db("todo_list").collection("todos").insertOne(newTodo);
+  const result = await client.db(config.database).collection("todos").insertOne(newTodo);
   console.log(`New todo created with id ${result.insertedId}`);
 }
