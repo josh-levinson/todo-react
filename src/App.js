@@ -23,6 +23,17 @@ function App() {
 
   const addTodo = () => {
     if (todo !== "") {
+      const createTodoUrl = `${baseUrl}/todos`;
+
+      axios.post(createTodoUrl, {
+        description: todo,
+        complete: false,
+      }).then((response) => {
+        console.log(response);
+      }).catch((error) => {
+        console.log(error);
+      });
+
       setTodos([...todos, todo]);
       setTodo("");
     }
