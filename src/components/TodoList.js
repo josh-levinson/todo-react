@@ -6,7 +6,7 @@ const TodoList = ({ list, remove }) => {
           {list.map((entry, index) => (
             <div key={crypto.randomUUID()} className="todo">
               <li key={index}>{entry.description}</li>
-              <button className="delete-button" onClick={() => remove(entry)}>Delete</button>
+              <button className="delete-button" onClick={() => remove(entry)}><i class="fa-solid fa-trash"></i></button>
             </div>
           ))}
         </ul>

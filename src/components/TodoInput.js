@@ -11,7 +11,7 @@ const TodoInput = ({ todo, setTodo, addTodo }) => {
         }}
       />
       <button className="add-button" onClick={addTodo}>
-        Add
+        <i class="fa-solid fa-plus"></i>
       </button>
     </div>
   );
