@@ -1,4 +1,11 @@
 const TodoInput = ({ todo, setTodo, addTodo }) => {
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      // 👇 Get input value
+      addTodo(); 
+    }
+  };
+
   return (
     <div className="input-wrapper">
       <input
@@ -6,6 +13,7 @@ const TodoInput = ({ todo, setTodo, addTodo }) => {
         value={todo}
         name="todo"
         placeholer="Create a new todo"
+        onKeyDown={handleKeyDown}
         onChange={(e) => {
           setTodo(e.target.value);
         }}
