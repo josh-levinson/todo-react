@@ -16,10 +16,14 @@ function App() {
     axios.get(todosUrl).then((response) => {
       setTodos(response.data.map((todo) => 
         {
-          return todo.description
+          return {
+            id: todo.id,
+            description: todo.description,
+            complete: todo.complete,
+          }
         }));
     })
-  }, [])
+  }, []);
 
   const addTodo = () => {
     if (todo !== "") {
@@ -39,8 +43,15 @@ function App() {
     }
   }
 
-  const deleteTodo = (text) => {
-    const newTodos = todos.filter((todo) => todo !== text);
+  const deleteTodo = (todo) => {
+    const deleteTodoUrl = `${baseUrl}/todos/${todo.id}`;
+    axios.delete(deleteTodoUrl).then((response) => {
+      console.log(response);
+    }).catch((error) => {
+      console.log(error);
+    });
+
+    const newTodos = todos.filter((todoInList) => todoInList.id !== todo.id);
     setTodos(newTodos);
   }
 
