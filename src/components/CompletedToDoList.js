@@ -1,4 +1,4 @@
-const TodoList = ({ todos, complete, remove }) => {
+const CompletedTodoList = ({ todos, remove }) => {
   return (
     <>
       {todos?.length > 0 ? (
@@ -6,7 +6,6 @@ const TodoList = ({ todos, complete, remove }) => {
           {todos.map((todo, index) => (
             <div key={crypto.randomUUID()} className="todo">
               <li key={index}>{todo.description}</li>
-              <button className="complete-button" onClick={() => complete(todo)}><i className="fa-solid fa-circle-check"></i></button>
               <button className="delete-button" onClick={() => remove(todo)}><i className="fa-solid fa-trash"></i></button>
             </div>
           ))}
@@ -18,4 +17,4 @@ const TodoList = ({ todos, complete, remove }) => {
   );
 }
 
-export default TodoList;
+export default CompletedTodoList;
