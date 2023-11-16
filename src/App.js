@@ -11,7 +11,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [completedTodos, setCompletedTodos] = useState([]);
 
-  const baseUrl = "http://localhost:3002/todos"
+  const baseUrl = "http://raspberrypi:3002/todos"
 
   useEffect(() => {
     const todosUrl = `${baseUrl}`;
