@@ -23,6 +23,7 @@
 
 # local config
 config.js
+.env
 
 npm-debug.log*
 yarn-debug.log*

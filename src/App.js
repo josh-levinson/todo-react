@@ -11,7 +11,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [completedTodos, setCompletedTodos] = useState([]);
 
-  const baseUrl = "http://raspberrypi:3002/todos"
+  const baseUrl = process.env.REACT_APP_RAILS_API_HOST
 
   useEffect(() => {
     const todosUrl = `${baseUrl}`;
