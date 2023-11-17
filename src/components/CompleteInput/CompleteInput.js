@@ -5,6 +5,7 @@ const CompleteAction = styled.button`
   color: #fff;
   border-left: none;
 `;
+
 const CompleteInput = ({ todo, complete }) => {
   return (
     <CompleteAction onClick={() => complete(todo)}><i class="fa-solid fa-check"></i></CompleteAction>

@@ -1,4 +1,4 @@
-import CompletedTodo from '../CompletedToDo/CompletedToDo';
+import CompletedTodo from "../CompletedTodo/CompletedTodo";
 
 const CompletedTodoList = ({ todos, remove }) => {
   return (

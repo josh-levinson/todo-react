@@ -29,40 +29,6 @@ body {
   letter-spacing: 0.2rem;
 }
 
-.input-wrapper {
-  margin: 3.5rem;
-}
-
-.todos-wrapper {
-  margin-bottom: 2.5rem;
-}
-
-input {
-  width: 450px;
-  padding: 0.8em;
-}
-
-input:focus {
-  outline: none;
-}
-
-button {
-  width: auto;
-  padding: 0.8em;
-  cursor: pointer;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-}
-
-input,
-button {
-  font-size: 1em;
-  appearance: none;
-  color: currentcolor;
-  background: #fff;
-  border: 1px solid #828691;
-}
-
 .empty {
   font-size: 20px;
   font-weight: 400;

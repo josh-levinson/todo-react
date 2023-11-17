@@ -1,6 +1,6 @@
 import axios from 'axios';
 import './App.css';
-import CompletedTodoList from './components/CompletedTodoList/CompletedToDoList';
+import CompletedTodoList from './components/CompletedTodoList/CompletedTodoList';
 import TodoInput from './components/TodoInput/TodoInput';
 import TodoList from './components/TodoList/TodoList';
 
