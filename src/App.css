@@ -8,7 +8,7 @@ body {
   padding: 50px;
   color: #000;
   min-height: 100vh;
-  background: #252525;
+  background: #e9e6e6;
   text-rendering: optimizeSpeed;
   font-family: "Roboto", sans-serif;
 }
@@ -18,17 +18,15 @@ body {
   max-width: 50%;
   margin: 0 auto;
   text-align: center;
-  background: #c9c1c1;
+  background: #98aec6;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px;
 }
 
-h1 {
-  font-weight: 300;
-  color: #2d2e2e;
+.title {
+  color: #161717;
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
-  text-transform: uppercase;
 }
 
 .input-wrapper {
@@ -43,7 +41,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  color: #fff;
 }
 
 input {
@@ -72,7 +69,7 @@ button {
   border: 1px solid #828691;
 }
 
-.add-button, .complete-button {
+.add-button, .completed-button {
   background-color: #409d5e;
   color: #fff;
   border-left: none;
@@ -84,13 +81,16 @@ button {
 }
 
 .add-button:hover .fa-solid,
-.complete-button:hover .fa-solid,
 .delete-button:hover .fa-solid {
   transition: transform 0.2s;
 
   &:hover {
     transform: scale(1.2);
   }
+}
+
+.completed-text {
+  text-decoration: line-through;
 }
 
 ul {
@@ -104,10 +104,10 @@ li {
   padding: 0.85em;
   text-align: left;
   margin-bottom: 0.5rem;
-  background: #494847;
+  background: #d7d8de;
   letter-spacing: 0.02rem;
   transition: all 0.3s ease-out;
-  border-left: 5px solid #cf972e;
+  border-left: 5px solid #2e43cf;
 }
 
 li:last-child {

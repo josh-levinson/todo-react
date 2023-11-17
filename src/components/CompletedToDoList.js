@@ -1,15 +1,15 @@
-import { v4 as uuidv4 } from 'uuid';
+import CompletedTodo from './CompletedToDo';
+import { useState } from 'react';
 
 const CompletedTodoList = ({ todos, remove }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <>
       {todos?.length > 0 ? (
         <ul className="todo-list">
           {todos.map((todo, index) => (
-            <div key={uuidv4()} className="todo">
-              <li key={index}>{todo.description}</li>
-              <button className="delete-button" onClick={() => remove(todo)}><i className="fa-solid fa-trash"></i></button>
-            </div>
+            <CompletedTodo todo={todo} remove={remove} />
           ))}
         </ul>
       ) : (

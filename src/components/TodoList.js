@@ -1,4 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
+import CompleteInput from './CompleteInput';
+import DeleteButton from './DeleteButton';
 
 const TodoList = ({ todos, complete, remove }) => {
   return (
@@ -8,8 +10,8 @@ const TodoList = ({ todos, complete, remove }) => {
           {todos.map((todo, index) => (
             <div key={uuidv4()} className="todo">
               <li key={index}>{todo.description}</li>
-              <button className="complete-button" onClick={() => complete(todo)}><i className="fa-solid fa-circle-check"></i></button>
-              <button className="delete-button" onClick={() => remove(todo)}><i className="fa-solid fa-trash"></i></button>
+              <CompleteInput todo={todo} complete={complete} />
+              <DeleteButton todo={todo} remove={remove} />
             </div>
           ))}
         </ul>

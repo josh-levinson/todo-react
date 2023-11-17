@@ -28,7 +28,7 @@ function App() {
         { return todo.completed === true; }
       ));
     })
-  }, []);
+  }, [baseUrl]);
 
   const todoUrl = (todo) => {
     return `${baseUrl}/${todo.id}`
@@ -79,7 +79,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Josh's ToDo List</h1>
+      <div className="title">Josh's ToDo List</div>
       <TodoInput todo={todo} setTodo={setTodo} addTodo={addTodo} />
       <TodoList todos={todos} complete={completeTodo} remove={deleteTodo} />
       <h3>Completed Todos</h3>
