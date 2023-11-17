@@ -8,7 +8,7 @@ const TodoContainer = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   min-width: 640px;
-  height: 40px;
+  height: auto;
   padding: 0.85em;
   margin-bottom: 0.5rem;
   background: #d7d8de;
@@ -20,7 +20,6 @@ const TodoContainer = styled.div`
 
 const Actions = styled.div`
   display: flex;
-  height: 30px;
 `;
 
 const Todo = ({ todo, remove, complete }) => {

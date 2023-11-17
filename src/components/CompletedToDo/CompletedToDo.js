@@ -6,7 +6,8 @@ const TodoContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  min-width: 480px;
+  min-width: 640px;
+  height: auto;
   padding: 0.85em;
   margin-bottom: 0.5rem;
   background: #d7d8de;
