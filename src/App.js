@@ -1,8 +1,8 @@
 import axios from 'axios';
 import './App.css';
-import CompletedTodoList from './components/CompletedToDoList';
-import TodoInput from './components/TodoInput';
-import TodoList from './components/TodoList';
+import CompletedTodoList from './components/CompletedTodoList/CompletedToDoList';
+import TodoInput from './components/TodoInput/TodoInput';
+import TodoList from './components/TodoList/TodoList';
 
 import { useEffect, useState } from "react";
 
@@ -83,7 +83,7 @@ function App() {
       <TodoInput todo={todo} setTodo={setTodo} addTodo={addTodo} />
       <TodoList todos={todos} complete={completeTodo} remove={deleteTodo} />
       <h3>Completed Todos</h3>
-      <CompletedTodoList todos={completedTodos} complete={completeTodo} remove={deleteTodo} />
+      <CompletedTodoList todos={completedTodos} remove={deleteTodo} />
     </div>
   );
 }
